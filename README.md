@@ -7,10 +7,12 @@ Backend-приложение для управления задачами.
 ## Структура проекта
 
 ```text
-tasks_api/
+test_staffinc/
 ├── main.py              ← точка входа (аналог AppModule)
-├── requirements.txt
-└── tasks/
+├── pyproject.toml       ← зависимости проекта
+├── docs/
+|    └── techspec.md      ← полное техническое задание
+└── app/
     ├── dto.py           ← Pydantic-схемы (аналог *.dto.ts)
     ├── service.py       ← бизнес-логика, хранение в памяти
     └── controller.py    ← HTTP-роутер (аналог *.controller.ts)
@@ -33,7 +35,10 @@ tasks_api/
 ## Запуск
 
 ```bash
+uv sync
+# or
 pip install -r requirements.txt
+
 uvicorn main:app --reload
 ```
 
