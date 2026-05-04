@@ -6,7 +6,7 @@ Backend-приложение для управления задачами.
 
 ## Структура проекта
 
-'''text
+```text
 tasks_api/
 ├── main.py              ← точка входа (аналог AppModule)
 ├── requirements.txt
